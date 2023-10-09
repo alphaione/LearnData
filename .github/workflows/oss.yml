@@ -16,8 +16,8 @@ jobs:
         node-version: '14.x'
     # 打包文档命令
     # - run: npm install yarn@1.22.4 -g
-    # - run: yarn install
-    # - run: yarn docs:build #需要配合 yarn 的 package.json
+    - run: yarn install
+    - run: yarn docs:build #需要配合 yarn 的 package.json
     - name: aliyun-oss-website-action
       uses: fangbinwei/aliyun-oss-website-action@v1.3.0
       with:
