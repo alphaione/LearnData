@@ -8,16 +8,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    # load repo to /github/workspace
-    - uses: actions/checkout@v3
+      # load repo to /github/workspace
+    - uses: actions/checkout@v2
     - name: Use Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v1
       with:
-        node-version: '14.x'
-    # 打包文档命令
+        node-version: '14'
     - run: npm install yarn@1.22.4 -g
     - run: yarn install
-    - run: yarn docs:build #需要配合 yarn 的 package.json
+    # 打包文档命令
+    - run: yarn docs:build
     - name: aliyun-oss-website-action
       uses: fangbinwei/aliyun-oss-website-action@v1.3.0
       with:
