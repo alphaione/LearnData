@@ -19,7 +19,7 @@ jobs:
     # - run: yarn install
     # - run: yarn docs:build #需要配合 yarn 的 package.json
     - name: aliyun-oss-website-action
-      uses: fangbinwei/aliyun-oss-website-action@v1.4.0
+      uses: fangbinwei/aliyun-oss-website-action@v1.3.0
       with:
           accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
           accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
