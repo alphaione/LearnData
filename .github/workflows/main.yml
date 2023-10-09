@@ -60,3 +60,17 @@ jobs:
           dst_branch: main
           src_branch: gh-pages
           clean: true
+      - name: aliyun-oss-website-action
+        uses: fangbinwei/aliyun-oss-website-action@v1.3.0
+        with:
+          accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
+          accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
+          bucket: whtml
+          # use your own endpoint
+          endpoint: oss-cn-nanjing.aliyuncs.com
+          # 全目录上传
+          folder: /.
+          # 不上传的文件
+          exclude: |
+            .github/
+            .gitattributes 
