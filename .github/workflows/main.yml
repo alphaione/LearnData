@@ -69,7 +69,7 @@ jobs:
           # use your own endpoint
           endpoint: oss-cn-nanjing.aliyuncs.com
           # 全目录上传
-          folder: /.
+          folder: LearnData
           # 不上传的文件
           exclude: |
             .github/
